@@ -103,7 +103,7 @@ const questions = () => {
     },
     {
         type: 'input',
-        name: 'instalation',
+        name: 'installation',
         message: 'what are the installation instructions?',
         vadlidate: nameInput =>{
             if(nameInput){
@@ -117,11 +117,34 @@ const questions = () => {
 ])};
 
 // TODO: Create a function to write README file
-function writeToFile(fileName, data) {}
+function writeToFile(fileName, data) {
+    return new Promise((resolve, reject)=>{
+        fs.writeFile('./utils/README.md', fileName, data, err =>{
+            // if error, reject promise
+            if (err){
+                reject(err);
+                console.log(err);
+                return;
+            }
+            //if successful resolve and sent promise
+            resolve({
+                ok: true,
+                message: 'File Created!'
+            });
+        });
+    });
+};
 
 // TODO: Create a function to initialize app
 function init() {
-    questions();
+    questions()
+    .then(data => {
+        return generateReadMe(data);
+    })
+    .then (data =>{
+        console.log(data);
+        return writeToFile(data);
+    })
 };
 
 // Function call to initialize app

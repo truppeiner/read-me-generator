@@ -34,7 +34,7 @@ function generateMarkdown(data) {
 
   ## Contributors
   Find me on GitHub: https://github.com/${data.name}
-  Email me at: ${email}
+  Email me at: ${data.email}
 `;
 }
 
