@@ -137,11 +137,15 @@ function writeToFile(fileName, data) {
 
 // TODO: Create a function to initialize app
 function init() {
+    //runs questions function 
     questions()
+    //passes data from query into generateReadMe function
     .then(data => {
         return generateReadMe(data);
     })
+    //takes information from generateReadMe and passes it through writefile which appends the new readme.md
     .then (data =>{
+        //logs data to ensure it works correctly
         console.log(data);
         return writeToFile(data);
     })
