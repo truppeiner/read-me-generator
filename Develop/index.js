@@ -131,6 +131,7 @@ function writeToFile(fileName, data) {
                 ok: true,
                 message: 'File Created!'
             });
+            console.log(resolve);
         });
     });
 };
