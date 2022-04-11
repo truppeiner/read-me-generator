@@ -2,28 +2,32 @@
   # read-me-generator
 
   ## Description 
-  A project using node.js in order to dynamically generate a README.md based upon a series of console questions
+  a project designed to display proficiency in node.js and inquirer
 
   ## Table of Contents
   - [Description](#description)
+  - [Liscensing](#liscensing)
   - [Usage Guidelines](#usage)
   - [Contribution Guidelines](#contribution)
   - [Installation Instructions](#installation)
   - [Test Instructions](#test)
-  - [Contributors](#name)
+  - [Contributors](#contributors)
 
   ## Usage Guidelines
-  This application should be used to create a professional readme
+  This project is intended to be used to generate a professional read-me
 
+  ## Liscensing 
+  
+  
   ## Contribution guidelines
-  Open source, any and all can contribute. 
+  Anyone can contribute
 
   ## Installation Instructions 
-  In order to install, make sure to install inquirer, it is the only npm dependency.
+  npm install 
 
   ## Test Instructions
-  In order to test the application type 'node index.js' into your console. 
+  install inquirer, navigate to develop and run index.js with command node index
 
   ## Contributors
-  Find me on GitHub: https://github.com/truppeiner
+  Find me on GitHub: https://github.com/truppeiner 
   Email me at: truppeiner@gmail.com
